@@ -17,8 +17,10 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               mainButton(
-                funcao: () {},
-                texto: 'Acessar Calculadora',
+                buttonFunction: () {
+                  Navigator.of(context).pushNamed('/calc');
+                },
+                buttonText: 'Acessar Calculadora',
               )
             ],
           )
