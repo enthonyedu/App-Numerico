@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-ElevatedButton mainButton({Function()? funcao, String texto = ''}) {
+ElevatedButton mainButton(
+    {Function()? buttonFunction,
+    String buttonText = '',
+    Color buttonCollor = Colors.blue}) {
   return ElevatedButton(
-    onPressed: funcao,
+    onPressed: buttonFunction,
     style: ButtonStyle(
-      backgroundColor:
-          MaterialStateProperty.all(const Color.fromARGB(255, 27, 157, 31)),
-      padding: MaterialStateProperty.all(const EdgeInsets.all(15)),
+      backgroundColor: MaterialStateProperty.all<Color>(buttonCollor),
+      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+          const EdgeInsets.all(15)),
     ),
     child: Text(
-      texto,
+      buttonText,
       style: const TextStyle(
-        fontSize: 20,
+        fontSize: 18,
+        color: Colors.white,
       ),
     ),
   );
