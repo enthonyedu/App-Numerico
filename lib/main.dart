@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:operacoes_numericas/views/calculator_page.dart';
 import 'package:operacoes_numericas/views/home_page.dart';
 
 void main(List<String> args) {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'App Númerico',
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => const HomePage(),
+        '/calc': (context) => const CalculatorPage(),
       },
     );
   }
